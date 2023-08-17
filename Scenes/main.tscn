@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d03pl6qxtf2g8"]
 
-[ext_resource type="Texture2D" uid="uid://did6yim330g46" path="res://Assets/Breakfast shapes/Border.png" id="1_ourvo"]
-[ext_resource type="Texture2D" uid="uid://br1wduha1yih1" path="res://Assets/Breakfast shapes/grid.png" id="2_b8apb"]
+[ext_resource type="Texture2D" uid="uid://cm2t3k1jl3idm" path="res://Assets/Breakfast shapes/Border 2.png" id="1_nr8o3"]
+[ext_resource type="Texture2D" uid="uid://i7e3yxxa42sf" path="res://Assets/Breakfast shapes/grid 2.png" id="2_f0f8t"]
 
 [node name="Main" type="Node"]
 
@@ -10,11 +10,11 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="Border" type="TextureRect" parent="Camera2D"]
 offset_left = -256.0
-offset_top = -496.0
+offset_top = -534.0
 offset_right = 1794.0
-offset_bottom = 3474.0
+offset_bottom = 3966.0
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_ourvo")
+texture = ExtResource("1_nr8o3")
 
 [node name="GridTexture" type="TextureRect" parent="Camera2D/Border"]
 layout_mode = 1
@@ -24,10 +24,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -961.0
-offset_top = -1921.0
+offset_top = -1650.0
 offset_right = 959.0
-offset_bottom = 1919.0
+offset_bottom = 2190.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_b8apb")
+texture = ExtResource("2_f0f8t")
 stretch_mode = 1

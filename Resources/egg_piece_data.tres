@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ly6o1227imfj"]
+
+[ext_resource type="Texture2D" uid="uid://cnklac0s7a4x" path="res://Assets/Breakfast shapes/egg 1.png" id="1_m6hf2"]
+[ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_nk3jj"]
+
+[resource]
+script = ExtResource("2_nk3jj")
+piece_texture = ExtResource("1_m6hf2")
+tetromino_type = 0
+spawn_position = Vector2(-24, -456)

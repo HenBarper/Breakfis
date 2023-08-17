@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://qr567roem6cc"]
+
+[ext_resource type="Texture2D" uid="uid://dkxxrhixe8def" path="res://Assets/Breakfast shapes/waffle.png" id="1_8n7fc"]
+[ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_p0qgy"]
+
+[resource]
+script = ExtResource("2_p0qgy")
+piece_texture = ExtResource("1_8n7fc")
+tetromino_type = 0
+spawn_position = Vector2(-24, -456)
