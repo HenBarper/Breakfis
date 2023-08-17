@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d03pl6qxtf2g8"]
+[gd_scene load_steps=6 format=3 uid="uid://d03pl6qxtf2g8"]
 
 [ext_resource type="Texture2D" uid="uid://cm2t3k1jl3idm" path="res://Assets/Breakfast shapes/Border 2.png" id="1_nr8o3"]
 [ext_resource type="Texture2D" uid="uid://i7e3yxxa42sf" path="res://Assets/Breakfast shapes/grid 2.png" id="2_f0f8t"]
+[ext_resource type="Script" path="res://Scripts/piece_spawner.gd" id="3_66kaw"]
+[ext_resource type="Script" path="res://Scripts/board.gd" id="4_j7gq6"]
+[ext_resource type="PackedScene" uid="uid://dvilx13alm53h" path="res://Scenes/tetromino.tscn" id="5_654ue"]
 
 [node name="Main" type="Node"]
 
@@ -10,9 +13,9 @@ zoom = Vector2(0.5, 0.5)
 
 [node name="Border" type="TextureRect" parent="Camera2D"]
 offset_left = -256.0
-offset_top = -534.0
+offset_top = -625.0
 offset_right = 1794.0
-offset_bottom = 3966.0
+offset_bottom = 3875.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_nr8o3")
 
@@ -31,3 +34,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_f0f8t")
 stretch_mode = 1
+
+[node name="PieceSpawner" type="Node" parent="."]
+script = ExtResource("3_66kaw")
+
+[node name="Board" type="Node" parent="."]
+script = ExtResource("4_j7gq6")
+tetromino_scene = ExtResource("5_654ue")
