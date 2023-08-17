@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://kir5tsti2b8p"]
+
+[ext_resource type="Texture2D" uid="uid://ck1252otsixnl" path="res://Assets/Breakfast shapes/Coffee Total.png" id="1_27ix2"]
+[ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_eu61j"]
+
+[resource]
+script = ExtResource("2_eu61j")
+piece_texture = ExtResource("1_27ix2")
+tetromino_type = 4
+spawn_position = Vector2(-24, -456)

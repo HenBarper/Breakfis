@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://bmunldel13dng"]
 
-[ext_resource type="Texture2D" uid="uid://das8v1tqhi8s2" path="res://Assets/Breakfast shapes/sausage 1.png" id="1_w3vp2"]
+[ext_resource type="Texture2D" uid="uid://bfnvmnxkybl1h" path="res://Assets/Breakfast shapes/Salami Total.png" id="1_qxe33"]
 [ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_8mc8r"]
 
 [resource]
 script = ExtResource("2_8mc8r")
-piece_texture = ExtResource("1_w3vp2")
-tetromino_type = 0
+piece_texture = ExtResource("1_qxe33")
+tetromino_type = 2
 spawn_position = Vector2(-24, -456)

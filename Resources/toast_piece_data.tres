@@ -1,10 +1,10 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://c1xwm6rbmbhmg"]
 
-[ext_resource type="Texture2D" uid="uid://dox2ika4xm4nu" path="res://Assets/Breakfast shapes/banana 1.png" id="1_a6bcg"]
+[ext_resource type="Texture2D" uid="uid://d1fy3c806med7" path="res://Assets/Breakfast shapes/Toast Total.png" id="1_w84p3"]
 [ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_by8wb"]
 
 [resource]
 script = ExtResource("2_by8wb")
-piece_texture = ExtResource("1_a6bcg")
-tetromino_type = 0
+piece_texture = ExtResource("1_w84p3")
+tetromino_type = 1
 spawn_position = Vector2(-24, -456)
