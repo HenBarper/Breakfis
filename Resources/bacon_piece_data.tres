@@ -1,3 +1,10 @@
-[gd_resource type="Resource" format=3 uid="uid://dmj7b7hq4uttw"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dmj7b7hq4uttw"]
+
+[ext_resource type="Texture2D" uid="uid://cou8m61qgwxfl" path="res://Assets/Breakfast shapes/bacon 1.png" id="1_cw8e7"]
+[ext_resource type="Script" path="res://Scripts/piece_data.gd" id="2_b71pc"]
 
 [resource]
+script = ExtResource("2_b71pc")
+piece_texture = ExtResource("1_cw8e7")
+tetromino_type = 0
+spawn_position = Vector2(-24, -456)
