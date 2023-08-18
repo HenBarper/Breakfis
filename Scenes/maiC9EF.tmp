@@ -47,7 +47,6 @@ tetromino_scene = ExtResource("5_654ue")
 position = Vector2(0, 463)
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-visible = false
 custom_minimum_size = Vector2(180, 90)
 offset_left = -251.0
 offset_top = -627.0

@@ -64,10 +64,10 @@ func hard_drop_ghost():
 		
 	return final_hard_drop_position
 
-func _input(event):
-	if Input.is_action_just_pressed("left"):
+func _input(_event):
+	if Input.is_action_pressed("left"):
 		move(Vector2.LEFT)
-	elif Input.is_action_just_pressed("right"):
+	elif Input.is_action_pressed("right"):
 		move(Vector2.RIGHT)
 	elif Input.is_action_pressed("down"):
 		move(Vector2.DOWN)
@@ -114,7 +114,7 @@ func is_colliding_with_other_tetrominos(direction: Vector2, starting_global_posi
 
 func rotate_tetromino(direction: int):
 	var original_rotation_index = rotation_index
-	if tetromino_data.tetromino_type == Shared.Tetromino.JAM:
+	if tetromino_data.tetromino_type == Shared.Tetromino.QUICHE:
 		return
 	
 	apply_rotation(direction)
@@ -150,8 +150,6 @@ func apply_rotation(direction: int):
 	
 	for i in tetromino_cells.size():
 		var cell = tetromino_cells[i]
-		var x
-		var y
 		var coordinates = rotation_matrix[0] * cell.x + rotation_matrix[1] * cell.y
 		tetromino_cells[i] = coordinates
 	

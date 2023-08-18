@@ -3,10 +3,12 @@ extends Node
 class_name Board
 
 signal tetromino_locked
+signal game_over
+@onready var panel_container = $"../PanelContainer"
 
 const ROW_COUNT = 20
 const COLUMN_COUNT = 10
-
+var next_tetromino
 var tetrominos: Array[Tetromino] = []
 @export var tetromino_scene: PackedScene
 
@@ -22,13 +24,27 @@ func spawn_tetromino(type: Shared.Tetromino, is_next_piece, spawn_position):
 		tetromino.other_tetrominos = tetrominos
 		tetromino.lock_tetromino.connect(on_tetromino_locked)
 		add_child(tetromino)
+	else:
+		tetromino.scale = Vector2(0.5, 0.5)
+		if panel_container != null: #Added to fix error
+			panel_container.add_child(tetromino)
+		tetromino.set_position(spawn_position)
+		next_tetromino = tetromino
 
 func on_tetromino_locked(tetromino: Tetromino):
+	#next_tetromino.queue_free()
 	tetrominos.append(tetromino)
 	tetromino_locked.emit()
-	#TODO check if gameover
-	#TODO check for lines to clear
+	check_game_over()
 	clear_lines()
+
+func check_game_over():
+	for tetromino in tetrominos:
+		var pieces = tetromino.get_children().filter(func (c): return c is Piece)
+		for piece in pieces:
+			var y_location = piece.global_position.y
+			if y_location == -463:
+				game_over.emit()
 
 func clear_lines():
 	var board_pieces = fill_board_pieces()
